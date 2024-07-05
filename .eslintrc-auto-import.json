@@ -62,7 +62,6 @@
     "registerSchema": true,
     "router": true,
     "toast": true,
-    "transformer": true,
     "trpc": true,
     "trpcServer": true,
     "updateTaskSchema": true,

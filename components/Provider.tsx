@@ -7,6 +7,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { loggerLink, unstable_httpBatchStreamLink } from '@trpc/client'
 import { createTRPCReact } from '@trpc/react-query'
 import { type TAppRouter } from '@/server/routes'
+import superjson from 'superjson'
 
 export const trpc = createTRPCReact<TAppRouter>()
 
@@ -20,7 +21,7 @@ const Provider = ({ children }: PropsWithChildren) => {
   }))
   const [trpcClient] = useState(() =>
     trpc.createClient({
-      transformer,
+      transformer: superjson,
       links: [
         loggerLink({
           enabled: (op) =>
