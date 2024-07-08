@@ -3,7 +3,9 @@
  * These routes do not require authentication
  */
 export const publicRoutes: string[] = [
-  '/'
+  '/',
+  '/privacy',
+  '/term-of-service'
   // '/auth/new-verification'
 ]
 
